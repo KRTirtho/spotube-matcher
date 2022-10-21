@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "Spotube Matcher",
+      "connectString": "postgres://fdjiwbgx:C7UsU-8MlCduhDTZPWfeKYCCwGfPiHVR@tiny.db.elephantsql.com/fdjiwbgx"
+    }
+  ]
+}
