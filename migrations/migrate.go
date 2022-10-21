@@ -12,5 +12,5 @@ func init() {
 }
 
 func main() {
-	bootstrappers.DB.AutoMigrate(&schemas.Post{}, &schemas.Track{})
+	bootstrappers.DB.AutoMigrate(&schemas.Track{})
 }

@@ -24,7 +24,7 @@ func BootstrapRateLimiter() {
 		return
 	}
 
-	redisPort, error := strconv.Atoi(os.Getenv("REDIS_DATABASE_NO"))
+	redisDBNo, error := strconv.Atoi(os.Getenv("REDIS_DATABASE_NO"))
 
 	if error != nil {
 		log.Fatal("Rate Limiter bootstrap failed ", error)
@@ -36,7 +36,7 @@ func BootstrapRateLimiter() {
 		Addr:     os.Getenv("REDIS_HOST") + ":" + os.Getenv("REDIS_PORT"),
 		Username: os.Getenv("REDIS_USERNAME"),
 		Password: os.Getenv("REDIS_PASSWORD"),
-		DB:       redisPort,
+		DB:       redisDBNo,
 	}
 
 	client := redis.NewClient(&option)

@@ -23,10 +23,6 @@ func main() {
 		ctx.JSON(200, gin.H{"Message": "Hello World"})
 	})
 
-	router.GET("/posts", routes.GetPosts)
-	router.GET("/posts/:id", routes.GetPost)
-	router.POST("/post", routes.CreatePost)
-
 	router.GET("/track/:spotifyId", routes.GetTrack)
 	router.PUT("/track/:id/upvote", routes.UpvoteTrack)
 	router.PUT("/track/:id/downvote", routes.DownvoteTrack)
